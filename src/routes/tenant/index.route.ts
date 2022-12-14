@@ -16,9 +16,6 @@ export default class TenantRoute implements Route {
 
   private readonly initializeRoutes = () => {
     this.router.use(`${this.path}`, setTenant());
-    this.router.use(
-      `${this.path}/example`,
-      this.tenantController.exampleRequest
-    );
+    this.router.use(`${this.path}/example`, this.tenantController.exampleRequest);
   };
 }
